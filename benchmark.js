@@ -19,35 +19,35 @@ function barFast () {
   return vargs(arguments, 2);
 }
 
-bench.add('5 args, slice', function () {
+bench.add('slice 5', function () {
   fooSlice(1, 2, 3, 4, 5);
 });
 
-bench.add('5 args, fast ', function () {
+bench.add('fast 5 ', function () {
   fooFast(1, 2, 3, 4, 5);
 });
 
-bench.add('8 args, slice', function () {
+bench.add('slice 8', function () {
   fooSlice(1, 2, 3, 4, 5, 6, 7, 8);
 });
 
-bench.add('8 args, slice', function () {
+bench.add('fast 8 ', function () {
   fooFast(1, 2, 3, 4, 5, 6, 7, 8);
 });
 
-bench.add('5 args, offset 2, slice', function () {
+bench.add('slice 5 (offset 2)', function () {
   barSlice(1, 2, 3, 4, 5);
 });
 
-bench.add('5 args, offset 2, fast ', function () {
+bench.add('fast 5 (offset 2) ', function () {
   barFast(1, 2, 3, 4, 5);
 });
 
-bench.add('10 args, offset 2, slice', function() {
+bench.add('slice 10 (offset 2)', function() {
   barSlice(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 });
 
-bench.add('10 args, offset 2, fast ', function() {
+bench.add('fast 10 (offset 2) ', function() {
   barFast(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 });
 
@@ -55,7 +55,7 @@ function rest (...args) {
   return args;
 }
 
-bench.add('6 args, rest params', function() {
+bench.add('rest params 6', function() {
   rest(1, 2, 3, 4, 5, 6);
 });
 
