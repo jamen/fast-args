@@ -1,12 +1,12 @@
 {
-  "name": "fast-variadic",
+  "name": "fast-args",
   "description": "Turn variadic function arguments into an array with speed.",
   "version": "0.1.1",
-  "homepage": "https://github.com/jamen/fast-variadic",
+  "homepage": "https://github.com/jamen/fast-args",
   "author": "Jamen Marz (https://github.com/jamen)",
-  "repository": "jamen/fast-variadic",
+  "repository": "jamen/fast-args",
   "bugs": {
-    "url": "https://github.com/jamen/fast-variadic/issues"
+    "url": "https://github.com/jamen/fast-args/issues"
   },
   "files": [
     "index.js"

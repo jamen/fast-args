@@ -2,7 +2,7 @@ var slice = Array.prototype.slice.call.bind(Array.prototype.slice);
 
 module.exports = vargs;
 
-/** @module fast-variadic
+/** @module fast-args
   *
   * Turn variadic function arguments into an array with speed.
   *

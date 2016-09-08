@@ -1,9 +1,9 @@
-# fast-variadic [![NPM version](https://badge.fury.io/js/fast-variadic.svg)](https://npmjs.org/package/fast-variadic) [![Build Status](https://travis-ci.org/jamen/fast-variadic.svg?branch=master)](https://travis-ci.org/jamen/fast-variadic)
+# fast-args [![NPM version](https://badge.fury.io/js/fast-args.svg)](https://npmjs.org/package/fast-args) [![Build Status](https://travis-ci.org/jamen/fast-args.svg?branch=master)](https://travis-ci.org/jamen/fast-args)
 
 > Turn variadic function arguments into an array with speed.
 
 ```js
-var vargs = require('fast-variadic');
+var vargs = require('fast-args');
 
 function foo() {
   return vargs(arguments);
@@ -18,7 +18,7 @@ The majority of functions out there don't go over 6 arguments.  So, this uses a 
 ## Installation
 
 ```sh
-$ npm install --save fast-variadic
+$ npm install --save fast-args
 ```
 
 ## API
@@ -28,7 +28,7 @@ Turn the `arguments` object into an array.  This is the only export of the modul
  - `arguments`: The `arguments` object of a function.
 
 ```js
-var vargs = require('fast-variadic');
+var vargs = require('fast-args');
 
 function foo() {
   var args = vargs(arguments);
