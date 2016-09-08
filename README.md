@@ -13,9 +13,9 @@ foo(1, 2, 3);
 // => [1, 2, 3]
 ```
 
-The majority of functions out there don't go over 6 arguments.  So, this uses a switch for manually making an array when there are 1 through 6 arguments, and then falls back on a fast custom slice for any number of arguments higher than that.
+Most functions don't get called with more than 6 params, so this module uses a switch for manually making an array when `arguments.length` is 1 through 6.  It can fall back on a fast slice for any number of params higher than 6.
 
-**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the fastest method of variadic functions in ES6.  This module is second best, also for anything ES5 and below.
+**Note:** This module is best for ES5 and below. Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the fastest method (by far) in ES6+.
 
 ## Installation
 
@@ -25,9 +25,9 @@ $ npm install --save fast-args
 
 ## API
 
-### `fargs(arguments, [offset])`
-Turn the `arguments` object into an array.  This is the only export of the module.
- - `arguments`: The `arguments` object of a function.
+### `fargs(args, [offset])`
+Turn the `arguments` object of a function  into an array.
+ - `args` (`arguments`): The `arguments` object of a function.
  - `offset` (`Number`): The index to start on `arguments`.
 
 ```js
@@ -39,7 +39,9 @@ function foo() {
 }
 ```
 
-### Meta
+This is the only export of the module.
+
+## Meta
 
  - `npm test`: Run tests.
  - `npm run bench`: Run benchmarks.

@@ -1,20 +1,27 @@
-var slice = Array.prototype.slice.call.bind(Array.prototype.slice);
-
 module.exports = fargs;
-
 /** @module fast-args
   *
-  * Turn variadic function arguments into an array with speed.
+  * Very fast way to turn a function's `arguments` into an array.
   *
-  * a = aguments
+  * Name key:
+  * a = arguments
   * o = offset
+  *
+  * Example:
+  * ```js
+  * function foo() {
+  *   var args = fargs(arguments);
+  *   // ...
+  * }
+  * ```
   */
 
 function fargs (a, o) {
   o = o || 0;
   var length = a.length - o;
 
-  // Handle common amounts manually.
+  // Handle most common lengths manually.
+  // This is where the speed comes in.
   if (length <= 0) return [];
   switch (length) {
     case 1: return [a[o]];
@@ -25,7 +32,7 @@ function fargs (a, o) {
     case 6: return [a[o++], a[o++], a[o++], a[o++], a[o++], a[o++]];
   }
 
-  // Fall back on manual slice.
+  // Fall back on a fast slice.
   var result = new Array(length);
   for (var i = 0; i < length; i++) result[i] = a[o + i];
   return result;
