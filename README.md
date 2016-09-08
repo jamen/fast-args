@@ -13,9 +13,9 @@ foo(1, 2, 3);
 // => [1, 2, 3]
 ```
 
-**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the fastest method of variadic functions in ES6.  This module is second best, also for anything ES5 and below.
-
 The majority of functions out there don't go over 6 arguments.  So, this uses a switch for manually making an array when there are 1 through 6 arguments, and then falls back on a fast custom slice for any number of arguments higher than that.
+
+**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the fastest method of variadic functions in ES6.  This module is second best, also for anything ES5 and below.
 
 ## Installation
 
