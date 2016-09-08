@@ -1,6 +1,6 @@
 # fast-args [![NPM version](https://badge.fury.io/js/fast-args.svg)](https://npmjs.org/package/fast-args) [![Build Status](https://travis-ci.org/jamen/fast-args.svg?branch=master)](https://travis-ci.org/jamen/fast-args)
 
-> Turn function arguments into an array with speed.
+> Very fast way to turn a function's `arguments` into an array.
 
 ```js
 var fargs = require('fast-args');
@@ -13,9 +13,9 @@ foo(1, 2, 3);
 // => [1, 2, 3]
 ```
 
-The majority of functions out there don't go over 6 arguments.  So, this uses a switch for manually making an array when there are 1 through 6 arguments, and then falls back on a fast custom slice for any number of arguments higher than that.
-
 **Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the fastest method of variadic functions in ES6.  This module is second best, also for anything ES5 and below.
+
+The majority of functions out there don't go over 6 arguments.  So, this uses a switch for manually making an array when there are 1 through 6 arguments, and then falls back on a fast custom slice for any number of arguments higher than that.
 
 ## Installation
 
