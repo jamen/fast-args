@@ -1,7 +1,7 @@
 {
   "name": "fast-args",
   "description": "Turn function arguments into an array with speed.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/jamen/fast-args",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/fast-args",
