@@ -1,0 +1,31 @@
+{
+  "name": "fast-variadic",
+  "description": "Turn variadic function arguments into an array with speed.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamen/fast-variadic",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/fast-variadic",
+  "bugs": {
+    "url": "https://github.com/jamen/fast-variadic/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test.js | tap-spec",
+    "bench": "node benchmark"
+  },
+  "keywords": [
+    "fast",
+    "variadic"
+  ],
+  "devDependencies": {
+    "benchmark": "^2.1.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
