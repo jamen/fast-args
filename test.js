@@ -1,4 +1,4 @@
-var vargs = require('.');
+var vargs = require('./');
 var test = require('tape');
 
 test('without offset', function (t) {
