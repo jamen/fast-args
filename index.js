@@ -1,4 +1,4 @@
-var slice = Array.prototype.slice;
+var slice = Array.prototype.slice.call.bind(Array.prototype.slice);
 
 module.exports = vargs;
 
@@ -12,13 +12,11 @@ module.exports = vargs;
 
 function vargs (a, o) {
   o = o || 0;
-
-  // If offset is less than -1, exit.
-  if (o < 0) return [];
+  var length = a.length - o;
 
   // Handle common amounts manually.
-  switch (a.length - o) {
-    case 0: return [];
+  if (length <= 0) return [];
+  switch (length) {
     case 1: return [a[o]];
     case 2: return [a[o++], a[o++]];
     case 3: return [a[o++], a[o++], a[o++]];
@@ -27,6 +25,8 @@ function vargs (a, o) {
     case 6: return [a[o++], a[o++], a[o++], a[o++], a[o++], a[o++]];
   }
 
-  // Fall back on slice for more than 6 arguments.
-  return slice.call(a, o);
+  // Fall back on manual slice.
+  var result = new Array(length);
+  for (var i = 0; i < length; i++) result[i] = a[o + i];
+  return result;
 }
