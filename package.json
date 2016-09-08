@@ -1,6 +1,6 @@
 {
   "name": "fast-args",
-  "description": "Turn variadic function arguments into an array with speed.",
+  "description": "Turn function arguments into an array with speed.",
   "version": "0.1.2",
   "homepage": "https://github.com/jamen/fast-args",
   "author": "Jamen Marz (https://github.com/jamen)",
@@ -21,7 +21,11 @@
   },
   "keywords": [
     "fast",
-    "variadic"
+    "variadic",
+    "args",
+    "arguments",
+    "slice",
+    "clone"
   ],
   "devDependencies": {
     "benchmark": "^2.1.1",

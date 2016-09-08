@@ -1,6 +1,6 @@
-var vargs = require('./');
+var fargs = require('./');
 var Suite = require('benchmark').Benchmark.Suite;
-var bench = new Suite('vargs');
+var bench = new Suite('fargs');
 var slice = Array.prototype.slice;
 
 function fooSlice () {
@@ -8,7 +8,7 @@ function fooSlice () {
 }
 
 function fooFast () {
-  return vargs(arguments);
+  return fargs(arguments);
 }
 
 function barSlice () {
@@ -16,7 +16,7 @@ function barSlice () {
 }
 
 function barFast () {
-  return vargs(arguments, 2);
+  return fargs(arguments, 2);
 }
 
 bench.add('slice 5', function () {

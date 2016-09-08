@@ -1,12 +1,14 @@
 # fast-args [![NPM version](https://badge.fury.io/js/fast-args.svg)](https://npmjs.org/package/fast-args) [![Build Status](https://travis-ci.org/jamen/fast-args.svg?branch=master)](https://travis-ci.org/jamen/fast-args)
 
-> Turn variadic function arguments into an array with speed.
+> Turn function arguments into an array with speed.
+
+**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the most fast method of variable arguments (by far).  This module is a best second for, also for anything non-ES6.
 
 ```js
-var vargs = require('fast-args');
+var fargs = require('fast-args');
 
 function foo() {
-  return vargs(arguments);
+  return fargs(arguments);
 }
 
 foo(1, 2, 3);
@@ -23,15 +25,16 @@ $ npm install --save fast-args
 
 ## API
 
-### `vargs(arguments)`
+### `fargs(arguments, [offset])`
 Turn the `arguments` object into an array.  This is the only export of the module.
  - `arguments`: The `arguments` object of a function.
+ - `offset` (`Number`): The index to start on `arguments`.
 
 ```js
-var vargs = require('fast-args');
+var fargs = require('fast-args');
 
 function foo() {
-  var args = vargs(arguments);
+  var args = fargs(arguments, 1);
   // ...
 }
 ```

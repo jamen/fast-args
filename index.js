@@ -1,6 +1,6 @@
 var slice = Array.prototype.slice.call.bind(Array.prototype.slice);
 
-module.exports = vargs;
+module.exports = fargs;
 
 /** @module fast-args
   *
@@ -10,7 +10,7 @@ module.exports = vargs;
   * o = offset
   */
 
-function vargs (a, o) {
+function fargs (a, o) {
   o = o || 0;
   var length = a.length - o;
 
