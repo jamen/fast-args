@@ -1,7 +1,7 @@
 {
   "name": "fast-variadic",
   "description": "Turn variadic function arguments into an array with speed.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/jamen/fast-variadic",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/fast-variadic",
