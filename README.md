@@ -2,7 +2,7 @@
 
 > Turn function arguments into an array with speed.
 
-**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the most fast method of variable arguments (by far).  This module is a best second for, also for anything non-ES6.
+**Note:** Use [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) for the most fast method of variadic function arguments.  This module is second best, also for anything ES5 and below.
 
 ```js
 var fargs = require('fast-args');
